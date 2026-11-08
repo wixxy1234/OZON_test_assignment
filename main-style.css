@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    height: 100vh;
+    max-height: 568px;
+    margin: 20px;
+}
+
+.layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+.progress-section,
+.controls-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.progress-section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.controls-section {
+    gap: 16px;
+    padding-top: 20px;
+}
+
+.control-item {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+#page-label {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.value-input {
+    width: 47px;
+    height: 30px;
+    border: 1px solid #272727;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+}
+
+.value-input::-webkit-outer-spin-button,
+.value-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.toggle-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-label input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 47px;
+    height: 28px;
+    background-color: #f0f0f0;
+    border-radius: 28px;
+    transition: background-color 0.3s ease;
+}
+
+/* белый кружочек */
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+
+.toggle-label input[type="checkbox"]:checked+.toggle-switch {
+    background-color: #0055ff;
+}
+
+.toggle-label input[type="checkbox"]:checked+.toggle-switch::after {
+    transform: translateX(17px);
+}
+
+@media (orientation: landscape) {
+    .app-container {
+        max-width: 568px;
+        height: 320px;
+        max-height: 100vh;
+    }
+
+    .layout-wrapper {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .progress-section,
+    .controls-section {
+        flex: 1;
+    }
+
+    .progress-section {
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 0;
+        padding-right: 40px;
+    }
+
+    .controls-section {
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 0;
+        padding-left: 40px;
+    }
+}

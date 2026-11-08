@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OZON test assignment</title>
-    <link rel="stylesheet" href="main-style.css">
+    <link rel="stylesheet" href="./main-style.css">
+    <link rel="stylesheet" href="./progress-bar/style.css">
 </head>
+
 <body>
     <header></header>
     <main>
-        <div class="container">
-            
+        <div class="app-container">
+            <span id="page-label">Progress</span>
+
+            <div class="layout-wrapper">
+                <div class="progress-section">
+                    <div class="progress-bar" id="my-progress">
+                        <svg class="progress-svg" viewBox="0 0 100 100">
+                            <!-- Фоновое кольцо -->
+                            <circle class="progress-track" cx="50" cy="50" r="45"></circle>
+                            <!-- Закрашенная часть -->
+                            <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="controls-section">
+                    <div class="control-item">
+                        <input type="number" class="value-input" id="value-input" min="0" max="100" value="0">
+                        <label for="value-input">Value</label>
+                    </div>
+                    <label class="control-item toggle-label">
+                        <input type="checkbox" id="animate-toggle">
+                        <span class="toggle-switch"></span>
+                        <span class="control-label">Animate</span>
+                    </label>
+                    <label class="control-item toggle-label">
+                        <input type="checkbox" id="hide-toggle">
+                        <span class="toggle-switch"></span>
+                        <span class="control-label">Hide</span>
+                    </label>
+                </div>
+            </div>
+
         </div>
     </main>
     <footer></footer>
-    <script src="/main-script.js"></script>
+    <script src="main-script.js"></script>
+    <script src="progress-bar/script.js"></script>
 </body>
+
 </html>
