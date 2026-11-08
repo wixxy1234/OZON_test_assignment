@@ -4,9 +4,12 @@
     padding: 0;
 }
 
-body {
+html, body {
+    height: 100%;
     overflow: hidden;
 }
+
+
 
 .app-container {
     display: flex;
@@ -134,6 +137,7 @@ body {
         flex: 1;
     }
 
+    
     .progress-section {
         justify-content: center;
         align-items: flex-end;
