@@ -6,6 +6,7 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -123,7 +124,6 @@ html, body {
 @media (orientation: landscape) {
     .app-container {
         max-width: 568px;
-        height: 320px;
         max-height: 100vh;
     }
 
@@ -137,7 +137,7 @@ html, body {
         flex: 1;
     }
 
-    
+
     .progress-section {
         justify-content: center;
         align-items: flex-end;
