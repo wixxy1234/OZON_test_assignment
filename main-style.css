@@ -10,6 +10,10 @@ html, body {
     overflow: hidden;
 }
 
+header{
+    margin: 20px 0 0 20px;
+}
+
 main{
     min-height: 100vh;
     display: flex;
@@ -69,7 +73,6 @@ main{
 #page-label {
     font-family: sans-serif;
     font-size: 18px;
-    margin: 20px;
 }
 
 .value-input {
